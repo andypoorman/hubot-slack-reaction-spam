@@ -15,6 +15,9 @@
 slack = require 'hubot-slack'
 default_emoji = require('node-emoji').emoji
 
+#limit some of the reactions are common english words
+blacklist = ['a', 'it', 'on', 'up']
+
 module.exports = (robot) ->
   emoji = {}
   options =
@@ -31,8 +34,11 @@ module.exports = (robot) ->
 
     for k, v of emoji
       emoji_name = k.replace('+','\\+')
+      if emoji_name in blacklist
+        continue
+
       re = new RegExp('\\b'+ emoji_name + '\\b' , 'g');
       if msg.message.text.match re
         robot.emit 'slack.reaction',
-        message: msg.message
-        name: emoji_name
+          message: msg.message
+          name: emoji_name

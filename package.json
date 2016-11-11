@@ -1,6 +1,6 @@
 {
   "name": "hubot-slack-reaction-spam",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React to Slack messages with any relevant emoji",
   "keywords": "hubot, hubot-scripts",
   "main": "index.coffee",
