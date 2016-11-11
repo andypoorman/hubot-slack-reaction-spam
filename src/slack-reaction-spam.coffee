@@ -13,7 +13,7 @@
 #   andypoorman
 
 slack = require 'hubot-slack'
-default_emoji = require('../node_modules/node-emoji/lib/emoji.json')
+default_emoji = require('../node-emoji/lib/emoji.json')
 
 module.exports = (robot) ->
   emoji = {}
