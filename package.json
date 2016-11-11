@@ -1,0 +1,27 @@
+{
+  "name": "hubot-slack-reaction-spam",
+  "version": "0.0.1",
+  "description": "React to Slack messages with any relevant emoji",
+  "keywords": "hubot, hubot-scripts",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "dependencies": {
+    "hubot": "^2.19.0",
+    "hubot-redis-brain": "0.0.3",
+    "hubot-slack": "^4.2.1",
+    "hubot-slack-reaction": "0.0.3",
+    "node-emoji": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/andypoorman/hubot-slack-reaction-spam.git"
+  },
+  "author": "Andy Poorman <andypoorman@gmail.com> (https://github.com/andypoorman)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andypoorman/hubot-slack-reaction-spam/issues"
+  },
+  "homepage": "https://github.com/andypoorman/hubot-slack-reaction-spam#readme"
+}
