@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git:https://github.com/andypoorman/hubot-slack-reaction-spam.git"
+    "url": "git://github.com/andypoorman/hubot-slack-reaction-spam.git"
   },
   "author": "Andy Poorman <andypoorman@gmail.com> (https://github.com/andypoorman)",
   "license": "MIT",
