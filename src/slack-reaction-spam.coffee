@@ -3,7 +3,6 @@
 #
 # Dependencies:
 #   hubot-slack
-#   hubot-slack-reaction
 #   node-emoji
 #
 # Configuration:
@@ -16,7 +15,7 @@ slack = require 'hubot-slack'
 default_emoji = require('node-emoji').emoji
 
 #limit some of the reactions are common english words
-blacklist = ['a', 'it', 'on', 'up']
+blacklist = ['a', 'it', 'on', 'up', 'm']
 
 module.exports = (robot) ->
   emoji = {}
@@ -39,6 +38,6 @@ module.exports = (robot) ->
 
       re = new RegExp('\\b'+ emoji_name + '\\b' , 'g');
       if msg.message.text.match re
-        robot.emit 'slack.reaction',
-          message: msg.message
-          name: emoji_name
+        robot.adapter.client.web.reactions.add(msg.message.reaction,
+          {channel: msg.message.room, timestamp: msg.message.id, name: emoji_name}
+        )
